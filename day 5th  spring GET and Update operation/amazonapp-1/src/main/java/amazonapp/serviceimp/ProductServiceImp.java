@@ -33,18 +33,12 @@ public class ProductServiceImp implements ProductService {
 	}
 	// for update product by admin
 
-	
-	public Optional<Product> updateProduct(Product product, long id) {
+	public Product updateProduct(Product product, long id) {
 
-		Optional<Product> updateprod = myLocalRepository.findById(id);// select * from product where id =?
+		product.setId(id);
+		Product updatedproduct = myLocalRepository.save(product);
 
-		updateprod.ifPresent(pp -> pp.setProductname(product.getProductname()));
-		updateprod.ifPresent(pp -> pp.setBrand(product.getBrand()));
-		updateprod.ifPresent(pp -> pp.setColor(product.getColor()));
-		
-		// myLocalRepository.save(updateprod);// update the database
-
-		return updateprod;
+		return updatedproduct;
 
 	}
 

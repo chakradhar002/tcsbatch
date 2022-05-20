@@ -41,9 +41,9 @@ public class ProductController {
 
 	//
 	@PutMapping(value="/updateproduct/{id}")
-	Optional<Product> updateProduct(@RequestBody Product updateproduct,@PathVariable long id) {
+	Product updateProduct(@RequestBody Product updateproduct,@PathVariable long id) {
 
-	 Optional<Product> updatedDetails= productService.updateProduct(updateproduct,id);
+	 Product updatedDetails= productService.updateProduct(updateproduct,id);
 	
 		
 	 return updatedDetails;

@@ -1,7 +1,6 @@
 package amazonapp.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import amazonapp.bean.Product;
 
@@ -21,7 +20,7 @@ public interface ProductService {
 	
 	//put or update
 	 
-	 Optional<Product> updateProduct(Product product,long id);
+	Product updateProduct(Product product,long id);
 	
 	   
 	
