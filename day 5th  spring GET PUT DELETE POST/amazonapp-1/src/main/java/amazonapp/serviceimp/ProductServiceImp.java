@@ -41,5 +41,11 @@ public class ProductServiceImp implements ProductService {
 		return updatedproduct;
 
 	}
+      /// delete service
+	@Override
+	public void deleteProductById(long id) {
+		
+		myLocalRepository.deleteById(id);  //delete from table where id =?
+	}
 
 }

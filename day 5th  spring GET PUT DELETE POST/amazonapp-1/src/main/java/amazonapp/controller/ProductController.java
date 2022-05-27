@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,15 +42,31 @@ public class ProductController {
 
 	}
 
-	//
-	@PutMapping(value="/updateproduct/{id}")
-	Product updateProduct(@RequestBody Product updateproduct,@PathVariable long id) {
+	// update by id
+	@PutMapping(value = "/updateproduct/{id}")
+	Product updateProduct(@RequestBody Product updateproduct, @PathVariable long id) {
+		Product updatedDetails = productService.updateProduct(updateproduct, id);
+		return updatedDetails;
 
-	 Product updatedDetails= productService.updateProduct(updateproduct,id);
-	
-		
-	 return updatedDetails;
+	}
 
+	@DeleteMapping(value = "/deleteprodcutbyid/{productid}")
+	ResponseEntity<String> deleteProductBy(@PathVariable long productid) {
+		try {
+
+			if (productid == 0) {
+
+				return ResponseEntity.ok("pls enter in proper id " + productid);
+
+			}
+			productService.deleteProductById(productid);
+
+			return ResponseEntity.ok("Sucessfully deleted " + productid);
+
+		} catch (Exception e) {
+
+			return ResponseEntity.ok("Product id does not exists " + productid);
+		}
 	}
 
 }

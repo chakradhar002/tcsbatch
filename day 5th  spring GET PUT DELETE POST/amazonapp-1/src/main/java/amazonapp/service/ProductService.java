@@ -11,23 +11,10 @@ public interface ProductService {
 	
 	// get all list of products
 	List<Product> getAllListOfProducts();
-	
-	//get by id
-	
-	//Product getProductById(long id);
-	
-
-	
-	//put or update
-	 
+	//update by id 
 	Product updateProduct(Product product,long id);
 	
-	   
-	
-	
-	
-	
-	// delete
-	
+	/// delete service
+	void deleteProductById(long id);
 
 }
