@@ -8,7 +8,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.demo.springsecurityjwt.MyUserDetailsService;
+import com.demo.springsecurityjwt.service.MyUserDetailsService;
 import com.demo.springsecurityjwt.util.JwtUtil;
 
 import javax.servlet.FilterChain;
