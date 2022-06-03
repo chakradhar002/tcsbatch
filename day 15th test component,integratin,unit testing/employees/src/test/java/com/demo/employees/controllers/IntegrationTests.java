@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.com.employees.controllers.EmployeeController;
-import com.com.employees.model.Employee;
+import com.demo.employees.controllers.EmployeeController;
+import com.demo.employees.model.Employee;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest

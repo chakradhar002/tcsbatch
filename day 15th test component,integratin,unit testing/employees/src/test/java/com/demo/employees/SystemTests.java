@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.com.employees.model.Employee;
+import com.demo.employees.model.Employee;
 
 public class SystemTests {
 

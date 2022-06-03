@@ -17,9 +17,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.com.employees.controllers.EmployeeController;
-import com.com.employees.model.Employee;
-import com.com.employees.services.EmployeeService;
+import com.demo.employees.controllers.EmployeeController;
+import com.demo.employees.model.Employee;
+import com.demo.employees.services.EmployeeService;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(EmployeeController.class)
@@ -42,6 +42,14 @@ public class StandaloneControllerTests {
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$", Matchers.hasSize(1)))
 				.andExpect(jsonPath("$[0].firstName", Matchers.is("Lokesh")));
+	}
+	
+	
+	
+	
+	@Test
+	public void testfindById() throws Exception {
+		
 	}
 
 }

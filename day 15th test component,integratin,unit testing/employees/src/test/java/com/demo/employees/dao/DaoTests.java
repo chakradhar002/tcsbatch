@@ -9,8 +9,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.com.employees.dao.EmployeeRepository;
-import com.com.employees.model.Employee;
+import com.demo.employees.dao.EmployeeRepository;
+import com.demo.employees.model.Employee;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest

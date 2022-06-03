@@ -16,9 +16,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.com.employees.dao.EmployeeRepository;
-import com.com.employees.model.Employee;
-import com.com.employees.services.EmployeeService;
+import com.demo.employees.dao.EmployeeRepository;
+import com.demo.employees.model.Employee;
+import com.demo.employees.services.EmployeeService;
 
 @ExtendWith(MockitoExtension.class)
 public class ServiceTests 
